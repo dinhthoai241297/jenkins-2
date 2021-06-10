@@ -17,6 +17,7 @@ TARTGET_FOLDER_DEPLOY="/opt/deploy/digi"
 BUILD_FOLER="dev-ops"
 
 echo _BRANCH_NAME
+echo _BUILD_NUMBER
 
 //node("slave-gcp") {
 node{
