@@ -37,7 +37,7 @@ node{
         if (_BRANCH_NAME.matches("dev|dev-ops")) {
 
             stage ("Build source") {
-                withEnv( ["PATH+MAVEN=/usr/local/src/apache-maven/bin"] ) {
+                withEnv( ["PATH+MAVEN=/usr/lib/apache-maven-3.6.3/bin"] ) {
                     sh """
                         cp -r source/* dev-ops/
                         cd dev-ops
