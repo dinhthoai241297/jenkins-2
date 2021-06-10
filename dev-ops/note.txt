@@ -1,0 +1,24 @@
+* URL env:
+	http://digi.admin.developteam.net
+	http://digi.api.developteam.net
+	http://digi.developteam.net
+
+* Swagger:
+	http://digi.api.developteam.net/digi-api/swagger-ui.html
+
+* Mysql: 
+
+CREATE USER 'digi_user' IDENTIFIED BY 'digi_user@123';
+CREATE USER 'digi_user'@'localhost' IDENTIFIED BY 'digi_user@123';
+
+CREATE DATABASE db_digi CHARACTER SET utf8;
+GRANT ALL PRIVILEGES ON db_digi.* TO 'digi_user';
+FLUSH PRIVILEGES;
+
+mysqldump db_digi -u root -p > backup_db_digi.sql
+
+* Copy data from docker to local image:
+	docker cp mysqldb:/backup/backup_db_digi .
+
+* Copy data from remote to local
+	scp root@209.126.1.89:/opt/db/backup/backup_db_digi.sql .
