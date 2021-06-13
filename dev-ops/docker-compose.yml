@@ -5,8 +5,8 @@
 #
 version: '2'
 networks:
-  basic:
-    #external:
+  digi_basic:
+    external: true
       #name: postgres-network
 services:
   apis:
