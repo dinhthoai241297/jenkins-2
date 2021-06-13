@@ -18,6 +18,6 @@ services:
     volumes:
       - /opt/deploy/digi/images:/uploads
     networks:
-        - basic
+        - digi_basic
     ports:
       - "127.0.0.1:{PORT}:8383"
